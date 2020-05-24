@@ -1,5 +1,5 @@
 // const axios = require('axios')
-const url = "https://api.buttercms.com/v2/pages/*/pelumi-home?auth_token=c60a9ee5329e50806b293f77216f0d9422b139c6";
+const url = "https://api.buttercms.com/v2/pages/*/home?auth_token={token}";
 let response;
 const appService = require('./appService');
 
