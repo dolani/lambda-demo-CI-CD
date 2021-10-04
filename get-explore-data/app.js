@@ -31,7 +31,7 @@ function createResponse(statusCode, message) {
 
 
 // return mapped data
- exports.getMappedExploreData = async (event, context, callback) => {
+exports.getMappedExploreData = async (event, context, callback) => {
     await appService.getMappedExploreData(url, event).then(response => {
         callback(null, createResponse(200, response));
     })
@@ -42,29 +42,4 @@ exports.getExploreData = async (event, context, callback) => {
     await appService.getExploreData(url, event).then(response => {
         callback(null, createResponse(200, response));
     });
-    // let resp;
-    // try {
-    //     await axios.get(url)
-    //         .then(response => {
-    //             resp = response.data;
-    //             console.log('--response.data--', resp);
-    //         });
-    //     return {
-    //         statusCode: 200,
-    //         headers: {
-    //             "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-    //             "Access-Control-Allow-Credentials": true // Required for cookies, authorization headers with HTTPS 
-    //         },
-    //         body: JSON.stringify(
-    //             {
-    //                 message: resp,
-    //                 // input: event,
-    //             },
-    //             null,
-    //             2
-    //         ),
-    //     };
-    // } catch (error) {
-    //     console.log("error", error);
-    // }
 }
